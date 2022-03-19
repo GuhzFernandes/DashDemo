@@ -1,0 +1,71 @@
+﻿@model IEnumerable<Dash.Models.Vendas>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DataVenda)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FormaPagamento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StatusVenda)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ValorVenda)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdCarroNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdClienteNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdVendedorNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataVenda)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FormaPagamento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StatusVenda)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ValorVenda)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdCarroNavigation.Cor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdClienteNavigation.Cidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdVendedorNavigation.Area)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdVenda">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.IdVenda">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdVenda">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

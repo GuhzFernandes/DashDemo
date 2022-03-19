@@ -1,0 +1,54 @@
+﻿@model Dash.Models.Carros
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Carros</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Marca)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Marca)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Modelo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Modelo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Ano)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ano)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Cor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Preco)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Preco)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.QuantidadeEstoque)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.QuantidadeEstoque)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
